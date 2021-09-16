@@ -1,2 +1,2 @@
-# lab-s-Programming-technologies-and-methods
+# Лабы Технологии и методы программирования
 Климов Дмитрий ЗИ-31
