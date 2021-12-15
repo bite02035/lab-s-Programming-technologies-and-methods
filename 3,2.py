@@ -2,6 +2,7 @@ from random import randint
 count = 1
 a=0
 s = []
+s1 = []
 while True:
     if count != 0:
         a = input("""Выберите действие:
@@ -19,9 +20,24 @@ while True:
             s.append(randint(1, 100))
     elif str(a) == "3":
         y = input("Элемент который надо вставить: ")
-        s.append(int(y))
+        pos = int(input("Укажите индекс"))
+        for i in range (len(s)):
+            if i == pos:
+                s1.append(y)
+            if i > pos:
+                j = i
+                s1.append(s[j])
+            else:
+                s1.append(s[i])
+        s = s1
     elif str(a) == "4":
-        d = int(input("Элемент который надо удалить: "))
+        l = int(len(s))
+        while True:
+            d = int(input("Элемент который надо удалить: "))
+            if d <= l-1:
+                break
+            else:
+                print("ОШИБКА!!!")
         s.pop(d)
     elif str(a) == "5":
         first = int(input("Укажите порядковый номер первого элемента"))
