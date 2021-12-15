@@ -1,7 +1,7 @@
-import itertools
 from random import randint
 count = 1
 a=0
+s = []
 while True:
     if count != 0:
         a = input("""Выберите действие:
@@ -14,7 +14,6 @@ while True:
     if str(a) == "1":
        count = 0
     elif str(a) == "2":
-        s = []
         n = int(input("Введите размер списка"))
         for i in range(n):
             s.append(randint(1, 100))
